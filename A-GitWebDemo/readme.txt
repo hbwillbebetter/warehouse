@@ -26,7 +26,7 @@ com.Listener.file---我基于监听器的例子，编写了监控文件发生变
 设计模式：
 参考文档：设计模式>1.设计模式——设计模式中英文对照
 behavior:行为模式
-策略模式、
+策略模式、模板方法模式
 creation:
 general:
 structural:
