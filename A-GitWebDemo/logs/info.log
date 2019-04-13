@@ -1,0 +1,5 @@
+[2019-04-11 17:40:19.049] [INFO ] [main] {com.design_pattern_23.behavior.template.v3.CompanyParser:64} current env : PROD
+[2019-04-11 17:43:01.496] [INFO ] [main] {com.design_pattern_23.behavior.template.v3.CompanyParser:64} current env : PROD
+[2019-04-11 21:09:48.791] [INFO ] [main] {com.design_pattern_23.behavior.template.v3.CompanyParser:64} current env : PROD
+[2019-04-11 21:09:48.825] [INFO ] [main] {com.design_pattern_23.behavior.template.v3.TemplateMethodMain:19} ********************
+[2019-04-11 21:31:03.965] [INFO ] [main] {com.design_pattern_23.behavior.template.v3.CompanyParser:64} current env : PROD
