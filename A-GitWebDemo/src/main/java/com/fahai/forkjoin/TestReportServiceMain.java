@@ -1,4 +1,4 @@
-package com.fahai;
+package com.fahai.forkjoin;
 
 import java.io.File;
 import java.io.IOException;
