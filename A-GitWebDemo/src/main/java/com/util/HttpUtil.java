@@ -14,6 +14,7 @@ import org.apache.commons.httpclient.methods.PostMethod;
 import org.apache.commons.httpclient.params.HttpMethodParams;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.log4j.Logger;
 
 /**
  * <p>Http工具类
@@ -25,7 +26,7 @@ import org.apache.commons.lang3.StringUtils;
  * 
  */
 public class HttpUtil {
-
+	private static Logger log = Logger.getLogger(HttpUtil.class);
     /**
      * <p>发送GET请求
      * 
