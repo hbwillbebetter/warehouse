@@ -1,7 +1,7 @@
 package com.datastructure.Array;
 
 import java.util.Arrays;
-
+//将两个有序的数组合并成一个新的有序的数组-------该思想会用于归并排序
 public class TestOpArray02 {
 
 	public static void main(String[] args) {
@@ -11,6 +11,7 @@ public class TestOpArray02 {
 		
 	}
 	
+	//优秀
 	public static String merge1(int[] a, int[] b){
 		int[] result = new int[a.length + b.length];
 		int k = 0;
@@ -38,6 +39,7 @@ public class TestOpArray02 {
 		
 	}
 	
+	//一般
 	public static String merge2(int[] a, int[] b){
 		int[] result = new int[a.length + b.length];
 		int k = 0;
