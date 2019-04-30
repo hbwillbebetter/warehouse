@@ -1,4 +1,4 @@
-package com.design_pattern_23.creation.simple_factory.simplefactory.v3;
+package com.design_pattern_23.creation.simple_factory.factorymethod.v1;
 
 public class DiaoShanFanFactory implements IFanFactory {
 
