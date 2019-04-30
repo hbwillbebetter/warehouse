@@ -45,6 +45,18 @@ public class ClientMain {
 		 * 4.易于替换产品家族
 		 */
 		
+		//Spring框架应用
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
