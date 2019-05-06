@@ -1,4 +1,4 @@
-package com.datastructure.tree.v1;
+package com.datastructure.tree.binaryTree.v1;
 
 public class BinaryTree implements Tree {
 	//根节点
@@ -9,7 +9,7 @@ public class BinaryTree implements Tree {
 	}
 
 	@Override
-	public Node fine(int key) {
+	public Node find(int key) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -55,10 +55,13 @@ public class BinaryTree implements Tree {
 		return false;
 	}
 
-	@Override
+	//中序遍历
 	public void infixOrder(Node current) {
-		// TODO Auto-generated method stub
-
+		if(current != null){
+			infixOrder(current.leftChild);
+			System.out.print(current.data+" ");
+			infixOrder(current.rightChild);
+		}
 	}
 
 	//前序遍历

@@ -1,4 +1,4 @@
-package com.datastructure.tree.v1;
+package com.datastructure.tree.binaryTree.v1;
 
 public class TestBinaryTree {
 	public static void main(String[] args) {
@@ -15,6 +15,9 @@ public class TestBinaryTree {
         bt.insert(100);
         //前序遍历二叉树
         bt.preOrder(bt.getRoot());
+        System.out.println();
+        //中序遍历
+        bt.infixOrder(bt.getRoot());
         
 	}
 }

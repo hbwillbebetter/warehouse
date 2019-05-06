@@ -1,4 +1,4 @@
-package com.datastructure.tree.v1;
+package com.datastructure.tree.binaryTree.v1;
 
 public class Node {
 	int data;//数据

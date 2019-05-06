@@ -1,8 +1,8 @@
-package com.datastructure.tree.v1;
+package com.datastructure.tree.binaryTree.v1;
 
 public interface Tree {
 	//查找节点
-	public Node fine(int key);
+	public Node find(int key);
 	
 	//删除节点
 	public boolean delete(int key);
