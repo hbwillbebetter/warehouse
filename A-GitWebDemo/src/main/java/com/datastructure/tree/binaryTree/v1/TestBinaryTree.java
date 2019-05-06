@@ -18,6 +18,25 @@ public class TestBinaryTree {
         System.out.println();
         //中序遍历
         bt.infixOrder(bt.getRoot());
+        System.out.println();
+        //查找节点
+        Node findNode = bt.find(50);
+        System.out.println(findNode);
+        //查找最小值
+        Node minNode = bt.findMin();
+        System.out.println(minNode);
+        //查找最大值
+        Node maxNode = bt.findMax();
+        System.out.println(maxNode);
+//        boolean delFlag = bt.delete(10);//删除叶子节点
+//        boolean delFlag = bt.delete(30);//删除节点只有一个子节点
+        boolean delFlag = bt.delete(80);//删除节点有两个子节点
+        System.out.println(delFlag);
+        //中序遍历
+        bt.infixOrder(bt.getRoot());
+        System.out.println();
+        
+        
         
 	}
 }
