@@ -10,7 +10,8 @@ import java.util.Queue;
 public class TestHaffmanTree {
 
 	public static void main(String[] args) {
-		int[] arr = {3,7,8,29,5,11,23,14};
+//		int[] arr = {3,7,8,29,5,11,23,14};
+		int[] arr = {11,11,1,7,1,1,1,1,8,1,1};
 		Node node = createHuffmanTree(arr);
 		System.out.println(node.toString());
 		cenOrder(node);
@@ -31,8 +32,8 @@ public class TestHaffmanTree {
 			//节点降序排列
 			Collections.sort(nodes);
 			//从集合取最小的两个节点，组成一个带根节点的二叉树
-			Node left = nodes.get(nodes.size()-2);
-			Node right = nodes.get(nodes.size()-1);
+			Node left = nodes.get(nodes.size()-1);
+			Node right = nodes.get(nodes.size()-2);
 			Node parent = new Node(left.value+right.value);
 			parent.left = left;
 			parent.right = right;
