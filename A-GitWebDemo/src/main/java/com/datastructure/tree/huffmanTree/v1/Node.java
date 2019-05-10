@@ -1,4 +1,4 @@
-package com.datastructure.tree.haffmanTree.v1;
+package com.datastructure.tree.huffmanTree.v1;
 
 public class Node implements Comparable<Node> {
 	//权值

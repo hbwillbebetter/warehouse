@@ -1,4 +1,4 @@
-package com.datastructure.tree.haffmanTree.v1;
+package com.datastructure.tree.huffmanTree.v1;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;
