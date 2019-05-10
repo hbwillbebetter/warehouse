@@ -41,8 +41,8 @@ public class TestThreadedBinaryTree {
 		ThreadedNode resultNode = bt.frontSearch("L");
 		System.out.println(resultNode);
 		
-		//删除子树
-		bt.delete("H");
+//		//删除子树
+//		bt.delete("H");
 		
 		//线索化二叉树
 		bt.threadNodes();

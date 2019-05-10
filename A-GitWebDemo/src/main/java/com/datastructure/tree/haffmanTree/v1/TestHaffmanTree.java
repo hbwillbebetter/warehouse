@@ -1,5 +1,6 @@
 package com.datastructure.tree.haffmanTree.v1;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -13,6 +14,8 @@ public class TestHaffmanTree {
 		Node node = createHuffmanTree(arr);
 		System.out.println(node.toString());
 		cenOrder(node);
+		System.out.println();
+		cenOrder2(node);
 	}
 	
 	//创建霍夫曼树
@@ -53,6 +56,37 @@ public class TestHaffmanTree {
 			}
 			if(root.right != null){
 				queue.add(root.right);
+			}
+		}
+		
+	}
+	//层次遍历二叉树，并分层打印
+	public static void cenOrder2(Node root) {
+		Queue<Node> queue = new ArrayDeque<Node>();
+		queue.add(root);
+		int currentLevel = 1;//记录当前层需要打印的节点个数
+		int nextLevel = 0;//记录下一层需要打印的节点个数
+		while (!queue.isEmpty()) {
+			Node temp = queue.poll();
+			System.out.print(temp.value+" ");
+			//当前层打印节点后，自减一
+			currentLevel--;
+			if(temp.left != null){
+				queue.add(temp.left);
+				nextLevel++;
+			}
+			if(temp.right != null){
+				queue.add(temp.right);
+				nextLevel++;
+			}
+			//如果当前层没有需要打印的节点
+			if(currentLevel == 0){
+				//换行输出
+				System.out.println();
+				//将下一层需要打印的节点个数，指向当前层的个数
+				currentLevel = nextLevel;
+				//重置下一层的个数
+				nextLevel = 0;
 			}
 		}
 		
