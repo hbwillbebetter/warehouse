@@ -9,9 +9,22 @@ public class BubbleSort {
 		
 		int[] array = {9,6,7,3,5,8,2,7,1};
 		System.out.println(Arrays.toString(array));
-		bubbleSort(array);
+		bubbleSort2(array);
 		System.out.println(Arrays.toString(array));
 		
+	}
+	
+	
+	public static void bubbleSort2(int[] array) {
+		for(int out=array.length-1; out > 0; out--){
+			for(int in=0; in<out; in++){
+				if (array[in] > array[in+1]) {
+					int temp = array[in];
+					array[in] = array[in+1];
+					array[in+1] = temp;
+				}
+			}
+		}
 	}
 	
 	public static void bubbleSort(int[] array) {
