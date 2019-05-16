@@ -19,7 +19,7 @@
 *.rar
 *.project
 target
-*.settings
+.settings
 *.classpath
 *.component
 
