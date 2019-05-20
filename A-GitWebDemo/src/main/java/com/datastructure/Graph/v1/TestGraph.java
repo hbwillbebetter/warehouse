@@ -31,7 +31,11 @@ public class TestGraph {
 		for(int[] a: graph.adjMat){
 			System.out.println(Arrays.toString(a));
 		}
-		
+		//深度优先搜索
+		graph.dfs();
+		System.out.println("===================");
+		//广度优先搜索
+		graph.bfs();
 		
 	}
 

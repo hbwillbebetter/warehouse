@@ -8,6 +8,8 @@ package com.datastructure.Graph.v1;
 public class Vertex {
 	
 	private String value;
+	//顶点是否访问过
+	public boolean visited;
 	
 	public Vertex(String value){
 		this.value = value;

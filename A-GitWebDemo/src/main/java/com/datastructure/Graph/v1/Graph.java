@@ -1,5 +1,8 @@
 package com.datastructure.Graph.v1;
 
+import com.util.MyQueue;
+import com.util.MyStack;
+
 /**
  * 图所在类
  * @author B
@@ -12,6 +15,11 @@ public class Graph {
 	private int currSize = 0;
 	//用一个二维数组，来表示邻接矩阵（存储每个顶点间的连通性）
 	int[][] adjMat;
+	private MyStack stack = new MyStack();
+	private MyQueue queue = new MyQueue();
+	//记录当前遍历的下标
+	private int currentIndex;
+	
 	
 	public Graph(int maxSize){
 		vertexs = new Vertex[maxSize];
@@ -24,7 +32,7 @@ public class Graph {
 	 */
 	public void addVertex(Vertex v1) {
 		//设置每个顶点，自己和和自己是联通的
-		adjMat[currSize][currSize] = 1;
+//		adjMat[currSize][currSize] = 1;
 		vertexs[currSize++] = v1;
 	}
 	
@@ -51,6 +59,75 @@ public class Graph {
 		adjMat[index2][index1] = 1;
 		
 	}
+	/**
+	 * 深度优先搜索算法遍历图
+	 */
+	public void dfs() {
+		//设置第一个顶点为已访问
+		vertexs[0].visited = true;
+		//将第0个顶点加入到栈中（再这里将顶点的下标放入栈中）
+		stack.push(0);
+		//打印顶点值
+		System.out.println(vertexs[0].getValue());
+		//当前遍历的下标
+		currentIndex = 0;
+		while (!stack.isEmpty()) {
+			for(int i = currentIndex+1; i<currSize; i++){
+				//如两个顶点是联通的，且下一个顶点还是未访问过的
+				if(adjMat[currentIndex][i] == 1 && vertexs[i].visited == false){
+					//设置下一个顶点为已访问
+					vertexs[i].visited = true;
+					//打印顶点
+					System.out.println(vertexs[i].getValue());
+					//将下一个顶点加入到栈中
+					stack.push(i);
+				}
+			}
+			//如果当前遍历的下标（本轮）遍历完，则移除栈顶元素
+			int pop = stack.pop();
+			if (!stack.isEmpty()) {
+				//重置当前遍历的下标为新的栈顶元素下标
+				currentIndex = stack.peek();
+			}
+		}
+	}
+	/**
+	 * 广度优先搜索算法遍历图
+	 */
+	public void bfs() {
+		//先重置所有顶点为未访问状态
+		for(int i=0; i<vertexs.length; i++){
+			vertexs[i].visited = false;
+		}
+		//设置第一个顶点为已访问
+		vertexs[0].visited = true;
+		//将第0个顶点加入到队列中（再这里将顶点的下标放入队列中）
+		//打印顶点值
+		System.out.println(vertexs[0].getValue());
+		queue.add(0);
+		while(!queue.isEmpty()){
+			for(int i=currentIndex+1; i<currSize; i++){
+				if (adjMat[currentIndex][i] == 1 && vertexs[i].visited == false) {
+					//打印顶点值
+					System.out.println(vertexs[i].getValue());
+					vertexs[i].visited = true;
+					queue.add(i);
+				}
+			}
+			//当前轮遍历完成后，移除队列头
+			queue.poll();
+			if (!queue.isEmpty()) {
+				//查看新的队列头,重置当前遍历的下标为新的队列头元素下标
+				currentIndex = queue.peek();
+			}
+		}
+		
+	}
+	
+	
+	
+	
+	
 	
 	
 	

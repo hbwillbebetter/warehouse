@@ -49,8 +49,11 @@ public class MyQueue {
 	public void show(){
 		System.out.println(Arrays.toString(elements));
 	}
-	
-	
+	//获取队列头元素
+	public int peek() {
+		return elements[0];
+	}
+
 	
 	
 }
