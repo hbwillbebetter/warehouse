@@ -84,7 +84,7 @@ public class Graph {
 				}
 			}
 			//如果当前遍历的下标（本轮）遍历完，则移除栈顶元素
-			int pop = stack.pop();
+			stack.pop();
 			if (!stack.isEmpty()) {
 				//重置当前遍历的下标为新的栈顶元素下标
 				currentIndex = stack.peek();
