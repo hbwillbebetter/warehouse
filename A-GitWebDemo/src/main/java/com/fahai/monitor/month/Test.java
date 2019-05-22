@@ -14,6 +14,11 @@ import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 聚宝盆监控-各项目sftp每月名单
+ * @author B
+ *
+ */
 public class Test {
 	private static Logger log = Logger.getLogger(Test.class);
     public static void main(String[] args) {
