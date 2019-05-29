@@ -1,4 +1,4 @@
-package com.thread.demo;
+package com.thread.demo1;
 
 /**
  * java中的sleep()和wait()的区别
