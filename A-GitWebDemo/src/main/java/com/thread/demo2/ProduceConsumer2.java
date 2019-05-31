@@ -7,6 +7,12 @@ import java.util.concurrent.locks.ReentrantLock;
 
 
 /**
+ * 
+ *  signalAll与ReentrantLock共用达到只唤醒对应条件的线程。
+ *  比如说当生产者生产的元素超过阈值的时候他就会调用signalAll这时所有的消费者被唤醒而所有的生产者则不受影响。这样就可以避免唤醒不必要的线程节省资源。
+ *	此处注意要给每一种线程都定义一个Condition，在上锁的时候就只用这个Condition的锁去锁定对应的线程
+ * 
+ * 
  * 使用Condition 完成生产者消费者模式
  * condition 可以精确线程的 await和signal/signalAll
  * @author B
