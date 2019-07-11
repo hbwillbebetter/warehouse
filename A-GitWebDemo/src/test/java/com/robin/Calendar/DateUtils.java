@@ -32,5 +32,27 @@ public class DateUtils {
 				.format(c.getTime());
 		System.out.println(dayAfter);
 	}
+	
+	//获取日期中的小时（24小时制）
+	@Test
+	public void getHour() throws InterruptedException{
+		String hour = new SimpleDateFormat("HH").format(new Date());
+		System.out.println(hour);
+		int hourInt = Integer.parseInt(hour);
+		while(true){
+			if (hourInt >= 21 && hourInt <= 23) {
+				System.out.println(hourInt);
+				Thread.sleep(1000);
+				hour = new SimpleDateFormat("HH").format(new Date());
+				hourInt = Integer.parseInt(hour);
+			}else {
+				System.out.println(hourInt);
+				break;
+			}
+		}
+	}
+	
+	
+	
 
 }
