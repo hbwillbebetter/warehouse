@@ -7,6 +7,11 @@ import java.util.List;
 
 import org.junit.Test;
 
+/**
+ * 参考网址：https://www.jianshu.com/p/222509e6ad80
+ * @author B
+ *
+ */
 public class SplitDate {
 	
 	
