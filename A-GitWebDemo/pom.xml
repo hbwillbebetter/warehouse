@@ -20,6 +20,11 @@
   </properties>
 
   <dependencies>
+  <dependency>
+   <groupId>com.alibaba</groupId>
+   <artifactId>easyexcel</artifactId>
+   <version>1.0.1</version>
+	</dependency>
   <!-- JSON解析框架依赖 -->
   <dependency>
 	    <groupId>com.fasterxml.jackson.core</groupId>
