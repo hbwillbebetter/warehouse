@@ -24,9 +24,22 @@ public class VisitMySql {
         VisitMySql vs = new VisitMySql();
        //调用查询方法
         vs.Select();
+        
     }
 
-    // 连接对象
+    private void parseJson(String paramsStr) {
+    			
+    	JSONObject jsonObject = JSONObject.parseObject(paramsStr);
+		if (jsonObject != null) {
+			String type = jsonObject.getString("type");
+			String tables = jsonObject.getString("fh-tables");
+			String[] split = tables.split("@@");
+			
+			System.out.println(split[1]);
+		}
+	}
+
+	// 连接对象
     private Connection conn;
     // 传递sql语句
     private Statement stt;
@@ -41,7 +54,7 @@ public class VisitMySql {
             if (conn == null)
                 return;
             // 定义sql语句
-            String Sql = "select params from BOS_TaskInfo where taskId = 2961";
+            String Sql = "select params from BOS_TaskInfo where taskId = 2960";
             // 执行sql语句
             stt = conn.createStatement();
             // 返回结果集
@@ -51,7 +64,8 @@ public class VisitMySql {
 
             	String paramsStr = set.getString(1);
             	System.out.println(paramsStr);
-            	Map<String, Object> rdMap = parseRD(paramsStr);
+            	parseJson(paramsStr);
+//            	Map<String, Object> rdMap = parseRD(paramsStr);
             }
 
         } catch (Exception e) {

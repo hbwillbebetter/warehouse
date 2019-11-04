@@ -20,6 +20,19 @@
   </properties>
 
   <dependencies>
+  <!-- JSON解析框架依赖 -->
+  <dependency>
+	    <groupId>com.fasterxml.jackson.core</groupId>
+	    <artifactId>jackson-databind</artifactId>
+	    <version>2.2.2</version>
+	</dependency>
+  <!-- https://mvnrepository.com/artifact/cglib/cglib -->
+<dependency>
+    <groupId>cglib</groupId>
+    <artifactId>cglib</artifactId>
+    <version>2.2.2</version>
+</dependency>
+  
   <!-- log4j 输出日志  开始-->
   <!-- https://mvnrepository.com/artifact/log4j/log4j -->
 	<dependency>
