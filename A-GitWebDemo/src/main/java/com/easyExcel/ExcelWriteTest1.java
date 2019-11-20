@@ -14,6 +14,7 @@ import com.alibaba.excel.support.ExcelTypeEnum;
 
 /**
  * https://blog.csdn.net/jianggujin/article/details/80200400#commentBox
+ * version:1.0.1
  * 首先，我们先来看看如何写Excel，写入Excel，我们可以通过com.alibaba.excel.ExcelWriter类实现，
  * 下面我们来看一下最简单的无表头的实现
  * @author B
