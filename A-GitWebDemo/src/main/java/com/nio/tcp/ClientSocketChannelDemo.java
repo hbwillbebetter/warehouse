@@ -147,19 +147,19 @@ public class ClientSocketChannelDemo {
          
         InetSocketAddress remoteAddress = new InetSocketAddress("127.0.0.1", 8080);
          
-//        Thread ta = new Thread(new TCPEchoClient("thread a", remoteAddress));
-//        Thread tb = new Thread(new TCPEchoClient("thread b", remoteAddress));
-//        Thread tc = new Thread(new TCPEchoClient("thread c", remoteAddress));
+        Thread ta = new Thread(new TCPEchoClient("thread a", remoteAddress));
+        Thread tb = new Thread(new TCPEchoClient("thread b", remoteAddress));
+        Thread tc = new Thread(new TCPEchoClient("thread c", remoteAddress));
         Thread td = new Thread(new TCPEchoClient("thread d", remoteAddress));
          
-//        ta.start();
-//        tb.start();
-//        tc.start();
-//         
-//        Thread.sleep(5000);
-// 
-//        /*结束客户端a*/
-//        ta.interrupt();
+        ta.start();
+        tb.start();
+        tc.start();
+         
+        Thread.sleep(5000);
+ 
+        /*结束客户端a*/
+        ta.interrupt();
          
         /*开始客户端d*/
         td.start();
