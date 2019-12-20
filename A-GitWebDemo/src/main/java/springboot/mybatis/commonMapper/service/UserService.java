@@ -12,5 +12,6 @@ public interface UserService {
 	int deleteUser(Long id);
 	List<User> listUsers();
 	User getUserById(Long id);
-
+	//分页功能
+	List<User> findItemByPage(int currentPage,int pageSize);
 }

@@ -14,11 +14,6 @@ spring:
       initial-size: 5                             #  初始化提供的连接数
       max-total: 5                                #  最大连接数
       max-wait-millis: 200                        #  等待连接获取的最大超时时间
-pagehelper:                       #pagehelper分页插件
-    helperDialect: mysql          #设置数据库方言
-    reasonable: true
-    supportMethodsArguments: true
-    params: count=countSql
 #spring.redis:
 #    database: 0
 #    host: localhost
@@ -44,10 +39,14 @@ mybatis:
   configLocation: classpath:mybatis/mybatis-config.xml  #  mybatis主配置文件所在路径
   typeAliasesPackage: springboot.mybatis.xml.entity  #  定义所有操作类的别名所在包
   mapperLocations: classpath:mybatis/mapper/*.xml  #  所有的mapper映射文件（mapper接口映射过来的xml局部配置文件）
-
 mapper: 
   mappers: tk.mybatis.mapper.common.Mapper  #通用mapper的所在接口名称 不只是包名
   identity: MYSQL #数据库
+pagehelper:                       #pagehelper分页插件
+    helperDialect: mysql          #设置数据库方言
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql  
 #logging:
 #  config: classpath:logback-admin.xml
 #log:

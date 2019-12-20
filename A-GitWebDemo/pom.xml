@@ -40,7 +40,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<!--web开发支持 -->
+		<!--web开发支持 默认就内嵌了Tomcat 容器，如需要更换容器也极其简单 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -85,7 +85,7 @@
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
-            <version>1.2.3</version>
+            <version>1.2.10</version>
         </dependency>
 		<!-- *********************************添加springboot依赖 end****************************************** -->
 
