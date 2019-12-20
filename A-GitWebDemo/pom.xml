@@ -30,7 +30,6 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
 		<!-- *********************************junit单元测试 end****************************************** -->
@@ -74,11 +73,11 @@
 		<!-- *********************************添加springboot依赖 end****************************************** -->
 
 		<!-- *********************************redis 相关 start*************************************** -->
-		<dependency>
+		<!-- <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
             <version>2.9.0</version>
-        </dependency>
+        </dependency> -->
         <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
@@ -100,11 +99,11 @@
 		<!-- *********************************redis 相关 end*************************************** -->
 		
 		<!-- *********************************netty start*************************************** -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>io.netty</groupId>
 			<artifactId>netty-all</artifactId>
 			<version>4.1.25.Final</version>
-		</dependency>
+		</dependency> -->
 		<!-- *********************************netty end*************************************** -->
 		
 		<!-- *********************************zookeeper start*************************************** -->
@@ -141,12 +140,6 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
-			<version>2.9.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>2.2.2</version>
 		</dependency>
 		<!-- ************************************JSON解析框架依赖 end***************************************** -->
 		
@@ -164,16 +157,16 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
 			<version>2.9.1</version>
-		</dependency>
-		<dependency>
+		</dependency> -->
+		<!-- <dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
 			<version>2.9.1</version>
-		</dependency>
+		</dependency> -->
 		<!-- ************************************log4j start**************************************** -->
 		
 		<!-- ************************************lucene start*************************************** -->
@@ -235,11 +228,11 @@
 			<artifactId>fastjson</artifactId>
 			<version>${fastjson.version}</version>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
 			<version>1.12</version>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>commons-httpclient</groupId>
 			<artifactId>commons-httpclient</artifactId>

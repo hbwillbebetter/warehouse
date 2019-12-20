@@ -15,8 +15,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.zip.ZipFile;
 
-import org.apache.logging.log4j.core.appender.rolling.action.ZipCompressAction;
-
 
 //霍夫曼编码
 public class TestHuffmanCode {
