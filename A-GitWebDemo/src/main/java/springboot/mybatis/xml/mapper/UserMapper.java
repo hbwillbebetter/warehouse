@@ -14,7 +14,15 @@ import springboot.mybatis.xml.entity.User;
  * @author B
  *
  */
-@Mapper//  该注解一定要加，否则无法映射到mybatis的***.xml(src/main/resources/mapper/*.xml)局部配置文件
+/**
+ * @Mapper注解说明：
+ * 注解不加，则一定需要添加启动类对mapper接口类所在包扫描，否则报错
+ * 注解加了，启动类对mapper接口类所在包扫描则不是必须的。
+ * 
+ * 映射到mybatis的***.xml(src/main/resources/mapper/*.xml)局部配置文件）。
+ *
+ */
+@Mapper
 public interface UserMapper {
 	
 	List<User> findAll();
