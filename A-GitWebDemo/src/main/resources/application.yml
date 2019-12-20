@@ -1,0 +1,43 @@
+#参考 https://blog.csdn.net/lizheng1992123/article/details/81608007
+server:
+  port: 8080
+spring:
+  datasource: 
+    url: jdbc:mysql://localhost:3306/mybatis
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+#spring.redis:
+#    database: 0
+#    host: localhost
+#    port: 6379
+#    password: 12345
+#    timeout: 2000
+#    jedis.pool:
+#      #jedis最大分配对象
+#      maxTotal: 1024
+#      #jedis最大保存idel状态对象数
+#      maxIdle: 200
+#      #jedis池没有对象返回时，最大等待时间
+#      maxWaitMillis: 1000
+#      testOnBorrow: true
+#      testOnReturn: true
+#      blockWhenExhausted: false
+#    pool:
+#      max-active: 8
+#      max-wait: 1
+#      max-idle: 8
+#      min-idle: 0
+#mybatis: 
+#  typeAliasesPackage: springboot.mybatis.annotation.entity  #  定义所有操作类的别名所在包
+#  mapperLocations: classpath:/mybatis/*  #  所有的mapper映射文件
+#logging:
+#  config: classpath:logback-admin.xml
+#log:
+#  level:
+#    root: info
+#    my: debug
+#  file: logs/admin-server.log
+#  maxsize: 30MB
+    
+    
