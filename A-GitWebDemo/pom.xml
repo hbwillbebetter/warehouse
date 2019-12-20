@@ -21,8 +21,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
+		<fastjson.version>1.2.47</fastjson.version>
 		<mybatis.version>1.3.2</mybatis.version>
-		<fastjson.version>1.2.57</fastjson.version>
 	</properties>
 
 	<dependencies>
@@ -57,7 +57,7 @@
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
-			<version>1.1.13</version>
+			<version>1.1.12</version>
 		</dependency>
 		<!-- 数据库驱动包 -->
 		<dependency>
@@ -65,8 +65,62 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.26</version>
 		</dependency>
+		<!-- 自动生成get set工具类 -->
+		<dependency>
+	        <groupId>org.projectlombok</groupId>
+	        <artifactId>lombok</artifactId>
+	        <optional>true</optional>
+	    </dependency>
 		<!-- *********************************添加springboot依赖 end****************************************** -->
 
+		<!-- *********************************redis 相关 start*************************************** -->
+		<dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+        <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+			<exclusions>
+				<!-- 2.0以上版本默认连接池是lettuce, 因为此次是采用jedis，所以需要在pom排除lettuce的jar -->
+				<exclusion>
+					<artifactId>lettuce-core</artifactId>
+					<groupId>io.lettuce</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+        <!-- Redisson组件用到依赖 start -->
+        <dependency>
+			<groupId>org.redisson</groupId>
+			<artifactId>redisson</artifactId>
+			<version>3.6.5</version>
+		</dependency>
+		<!-- Redisson组件用到依赖 end -->
+		<!-- *********************************redis 相关 end*************************************** -->
+		
+		<!-- *********************************netty start*************************************** -->
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-all</artifactId>
+			<version>4.1.25.Final</version>
+		</dependency>
+		<!-- *********************************netty end*************************************** -->
+		
+		<!-- *********************************zookeeper start*************************************** -->
+		<dependency>
+			<groupId>org.apache.zookeeper</groupId>
+			<artifactId>zookeeper</artifactId>
+			<version>3.4.10</version>
+		</dependency>
+	
+		<dependency>
+			<groupId>com.101tec</groupId>
+			<artifactId>zkclient</artifactId>
+			<version>0.11</version>
+		</dependency>
+		<!-- *********************************zookeeper end*************************************** -->
+		
 		<!-- *********************************mybatis 反向代码生成 start*************************************** -->
 		<dependency>
 			<groupId>org.mybatis.generator</groupId>
@@ -84,6 +138,11 @@
 		<!-- *************************************阿里easyExcel	end***************************************** -->
 		
 		<!-- ************************************JSON解析框架依赖 start*************************************** -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.9.0</version>
+		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
@@ -152,9 +211,14 @@
 		
 		<!-- ************************************fahai data export lib start************************ -->
 		<dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>23.0</version>
+        </dependency>
+		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>3.0</version>
+			<version>3.4</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
