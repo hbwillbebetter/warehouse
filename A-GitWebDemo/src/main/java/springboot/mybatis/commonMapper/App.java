@@ -2,15 +2,16 @@ package springboot.mybatis.commonMapper;
 
 import java.util.Properties;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+import tk.mybatis.spring.annotation.MapperScan;
+
 import com.github.pagehelper.PageHelper;
 
 //https://www.cnblogs.com/yanfei1819/p/10876339.html
-//@MapperScan(value={"springboot.mybatis.commonMapper.dao.*"})
+//@MapperScan(basePackages={"springboot.mybatis.commonMapper.dao"})
 @SpringBootApplication
 public class App {
 
