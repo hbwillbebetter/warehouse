@@ -25,7 +25,4 @@ import springboot.mybatis.commonMapper.model.User;
 @Mapper
 public interface UserMapper extends tk.mybatis.mapper.common.Mapper<User> {
 	
-//	List<User> findAll();
-//	
-//	void addUser(User user);
 }

@@ -34,6 +34,16 @@
 		<!-- *********************************junit单元测试 end****************************************** -->
 		
 		<!-- *********************************添加springboot依赖 start****************************************** -->
+		<!--热部署依赖-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+		<!--thymeleaf依赖-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
 		<!--测试支持 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -45,7 +55,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		<!-- mybatis -->
+		<!-- mybatis 这个依赖已经包括JDBC依赖 -->
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
@@ -70,11 +80,16 @@
 			<version>1.1.12</version>
 		</dependency>
 		<!-- 数据库驱动包 -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 			<version>5.1.26</version>
-		</dependency>
+		</dependency> -->
+		<dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
 		<!-- 自动生成get set工具类 -->
 		<dependency>
 	        <groupId>org.projectlombok</groupId>

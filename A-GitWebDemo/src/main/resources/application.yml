@@ -14,6 +14,16 @@ spring:
       initial-size: 5                             #  初始化提供的连接数
       max-total: 5                                #  最大连接数
       max-wait-millis: 200                        #  等待连接获取的最大超时时间
+spring.thymeleaf:   #thymeleaf配置,这里是可以省略的，因为默认配置已经足够
+  cache: false  #关闭缓存，及时刷新页面,这一点很重要
+#  prefix: classpath:/templates/   #注释的部分是Thymeleaf默认的配置，如有其它需求可以自行更改
+#  suffix: .html   #注释的部分是Thymeleaf默认的配置，如有其它需求可以自行更改
+#  mode: HTML5   #注释的部分是Thymeleaf默认的配置，如有其它需求可以自行更改
+#  encoding: UTF-8   #注释的部分是Thymeleaf默认的配置，如有其它需求可以自行更改
+#  servlet.content-type: text/html   #注释的部分是Thymeleaf默认的配置，如有其它需求可以自行更改
+spring.devtools.restart:  #设置热部署
+  enabled: true   #开启热部署
+  additional-paths: src/main/java   #重启范围
 #spring.redis:
 #    database: 0
 #    host: localhost
@@ -36,9 +46,11 @@ spring:
 #      max-idle: 8
 #      min-idle: 0
 mybatis: 
-  configLocation: classpath:mybatis/mybatis-config.xml  #  mybatis主配置文件所在路径
-  typeAliasesPackage: springboot.mybatis.xml.entity  #  定义所有操作类的别名所在包
-  mapperLocations: classpath:mybatis/mapper/*.xml  #  所有的mapper映射文件（mapper接口映射过来的xml局部配置文件）
+  configLocation: 
+    classpath: mybatis/mybatis-config.xml  #  mybatis主配置文件所在路径
+    map-underscore-to-camel-case: true  #开启驼峰映射
+  typeAliasesPackage: springboot.mybatis.commonMapper.model  #  定义所有操作类的别名所在包
+  mapper-locations: classpath:mybatis/commonMapper/mapper/*.xml  #  所有的mapper映射文件（mapper接口映射过来的xml局部配置文件）
 mapper: 
   mappers: tk.mybatis.mapper.common.Mapper  #通用mapper的所在接口名称 不只是包名
   identity: MYSQL #数据库
