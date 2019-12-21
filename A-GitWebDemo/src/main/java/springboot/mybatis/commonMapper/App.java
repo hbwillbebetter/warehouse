@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean;
 import com.github.pagehelper.PageHelper;
 
 //https://www.cnblogs.com/yanfei1819/p/10876339.html
-//@MapperScan("springboot.mybatis.commonMapper.dao")
+//@MapperScan(value={"springboot.mybatis.commonMapper.dao.*"})
 @SpringBootApplication
 public class App {
 
