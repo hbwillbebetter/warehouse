@@ -236,6 +236,12 @@
 		<!-- ************************************lucene end***************************************** -->
 		
 		<!-- ************************************fahai data export lib start************************ -->
+		<!-- c3p0 -->
+		<dependency>
+		    <groupId>c3p0</groupId>
+		    <artifactId>c3p0</artifactId>
+		    <version>0.9.1.1</version>
+		</dependency>
 		<dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
