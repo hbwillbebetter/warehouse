@@ -4,7 +4,7 @@ server:
 spring:
   datasource: 
     driver-class-name: com.mysql.jdbc.Driver  #  配置mysql的驱动程序类
-    url: jdbc:mysql://localhost:3306/mybatis?useUnicode=true&characterEncoding=UTF-8         #  数据库连接地址
+    url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&characterEncoding=UTF-8         #  数据库连接地址
     username: root  #  数据库用户名
     password: root  #  数据库密码
 #    type: com.alibaba.druid.pool.DruidDataSource  #  配置当前要使用的数据源的操作类型
@@ -55,11 +55,11 @@ spring.devtools.restart:  #设置热部署
 #      max-idle: 8
 #      min-idle: 0
 mybatis: 
-  configLocation: 
-    classpath: mybatis/mybatis-config.xml  #  mybatis主配置文件所在路径
-    map-underscore-to-camel-case: true  #开启驼峰映射
-  typeAliasesPackage: springboot.mybatis.commonMapper.model  #  定义所有操作类的别名所在包
-  mapper-locations: classpath:mybatis/*/mapper/*.xml  #  所有的mapper映射文件（mapper接口映射过来的xml局部配置文件）
+#  configLocation: 
+#    classpath: mybatis/mybatis-config.xml  #  mybatis主配置文件所在路径
+#    map-underscore-to-camel-case: true  #开启驼峰映射
+  typeAliasesPackage: springboot.Restful_CURD.bean  #  定义所有操作类的别名所在包
+  mapper-locations: classpath:Restful_CURD/mapper/*.xml  #  所有的mapper映射文件（mapper接口映射过来的xml局部配置文件）
 mapper: 
   mappers: tk.mybatis.mapper.common.Mapper  #通用mapper的所在接口名称 不只是包名
   identity: MYSQL #数据库
