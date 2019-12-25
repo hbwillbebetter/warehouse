@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thymeleaf知识点</title>
+</head>
+<body>
+Thymeleaf知识点
+<h2>显示文本</h2>
+<span th:text="${name}"></span>
+
+<h2>显示html</h2>
+<div th:utext="${msg}"></div>
+
+
+<h2>循环</h2>
+<table>
+    <tr>
+        <td>用户名</td>
+        <td>密码</td>
+    </tr>
+    <tr th:each="u : ${uList}">
+        <td th:text="${u.username}"></td>
+        <td th:text="${u.password}"></td>
+    </tr>
+</table>
+
+</body>
+</html>

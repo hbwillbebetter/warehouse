@@ -36,13 +36,13 @@ public class ThymeleafController {
         mv.addObject("uList",list);
         mv.addObject("msg","<span style='color:red'>hello spring!!!!!</span>");
         mv.addObject("name","zs");
-        mv.setViewName("list"); //设置返回页面
+        mv.setViewName("thymeleaf_list"); //设置返回页面
         return mv;
     }
 
 
     @RequestMapping("/list2")
     public String list2(){
-        return "list";
+        return "thymeleaf_list";
     }
 }
