@@ -1,16 +1,10 @@
 package springboot.mybatis.commonMapper;
 
-import java.util.Properties;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
-
-import tk.mybatis.spring.annotation.MapperScan;
-
-import com.github.pagehelper.PageHelper;
 
 //https://www.cnblogs.com/yanfei1819/p/10876339.html
 //@MapperScan(basePackages={"springboot.mybatis.commonMapper.dao"})

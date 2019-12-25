@@ -60,8 +60,8 @@ mybatis:
 #  configLocation: 
 #    classpath: mybatis/mybatis-config.xml  #  mybatis主配置文件所在路径
 #    map-underscore-to-camel-case: true  #开启驼峰映射
-  typeAliasesPackage: springboot.Restful_CURD.bean  #  定义所有操作类的别名所在包
-  mapper-locations: classpath:Restful_CURD/mapper/*.xml  #  所有的mapper映射文件（mapper接口映射过来的xml局部配置文件）
+  typeAliasesPackage: springboot.mybatis.commonMapper.model  #  定义所有操作类的别名所在包
+  mapper-locations: classpath:mybatis/commonMapper/mapper/*.xml  #  所有的mapper映射文件（mapper接口映射过来的xml局部配置文件）
 mapper: 
   mappers: tk.mybatis.mapper.common.Mapper  #通用mapper的所在接口名称 不只是包名
   identity: MYSQL #数据库
@@ -78,5 +78,8 @@ pagehelper:                       #pagehelper分页插件
 #    my: debug
 #  file: logs/admin-server.log
 #  maxsize: 30MB
+
+
+
     
     
