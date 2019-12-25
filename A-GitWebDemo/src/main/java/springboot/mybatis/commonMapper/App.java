@@ -23,6 +23,23 @@ public class App {
 		SpringApplication.run(App.class, args);
 	}
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	//配置mybatis的分页插件pageHelper
 //    @Bean
 //    public PageHelper pageHelper(){

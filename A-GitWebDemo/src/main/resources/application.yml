@@ -25,6 +25,8 @@ spring:
 #      max-wait-millis: 200                        #  等待连接获取的最大超时时间
 spring.thymeleaf:   #thymeleaf配置,这里是可以省略的，因为默认配置已经足够
   cache: false  #是否缓存，开发模式下设置为false，避免改了模板还要重启服务器，线上设置为true，可以提高性能。 关闭缓存，及时刷新页面,这一点很重要
+#自定义启动banner文件的路径
+spring.banner.location: banner.txt
 #  prefix: classpath:/templates/   #指定模板所在的目录   注释的部分是Thymeleaf默认的配置，如有其它需求可以自行更改
 #  suffix: .html   #注释的部分是Thymeleaf默认的配置，如有其它需求可以自行更改
 #  mode: HTML5   #注释的部分是Thymeleaf默认的配置，如有其它需求可以自行更改
