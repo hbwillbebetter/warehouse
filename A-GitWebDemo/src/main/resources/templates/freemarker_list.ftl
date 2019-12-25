@@ -18,6 +18,11 @@ ${loginName!"未知"}
         <td>${role.rname}</td>
     </tr>
     </#list>
+    <#list lqmxMap?keys as key>
+    	<tr>
+    		<td>${key}:${lqmxMap[key]}</td>
+    	</tr>
+    </#list>
 </table>
 <h2>导页面</h2>
 <#--导入整个-->

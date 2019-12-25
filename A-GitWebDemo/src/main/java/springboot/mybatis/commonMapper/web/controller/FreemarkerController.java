@@ -1,7 +1,9 @@
 package springboot.mybatis.commonMapper.web.controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +26,12 @@ public class FreemarkerController {
 	        mv.addObject("loginName","张三");
 	        mv.addObject("roleList",list);
 	        mv.addObject("name","zs");
-	        mv.setViewName("freemaker_list"); //设置返回页面
+	        Map<String, String> lqmxMap = new HashMap<String, String>();
+	        lqmxMap.put("23", "詹姆斯");
+	        lqmxMap.put("24", "科比");
+	        lqmxMap.put("34", "字母哥");
+	        mv.addObject("lqmxMap",lqmxMap);
+	        mv.setViewName("freemarker_list"); //设置返回页面
 	        return mv;
 	    }
 }

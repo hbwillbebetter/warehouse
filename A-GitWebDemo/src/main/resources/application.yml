@@ -30,6 +30,8 @@ spring.thymeleaf:   #thymeleaf配置,这里是可以省略的，因为默认配�
 #  mode: HTML5   #注释的部分是Thymeleaf默认的配置，如有其它需求可以自行更改
 #  encoding: UTF-8   #与Servlet中设置输出对应属性效果一致。    注释的部分是Thymeleaf默认的配置，如有其它需求可以自行更改
 #  servlet.content-type: text/html   #与Servlet中设置输出对应属性效果一致。  注释的部分是Thymeleaf默认的配置，如有其它需求可以自行更改
+spring.freemarker: 
+  suffix: .ftl #默认扩展名为 .ftl，放在templates文件夹中，如果想改变，可以通过application配置文件中添加spring.freemarker.suffix=.html,更改后就会找.html结尾的文件模板
 spring.devtools.restart:  #设置热部署
   enabled: true   #开启热部署
   additional-paths: src/main/java   #重启范围
