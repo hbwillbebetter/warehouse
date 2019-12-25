@@ -1,14 +1,20 @@
 package springboot.mybatis.commonMapper;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.SpringBootConfiguration;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.stereotype.Component;
 
 //https://www.cnblogs.com/yanfei1819/p/10876339.html
 //@MapperScan(basePackages={"springboot.mybatis.commonMapper.dao"})
-@SpringBootApplication
+@SpringBootApplication	//一个注解顶下面三个(TODO 好像会报错，未解决)
+//@SpringBootConfiguration
+//@EnableAutoConfiguration
+//@Component
 @EnableAsync	//开启异步任务
 @EnableScheduling //开启定时任务
 public class App {

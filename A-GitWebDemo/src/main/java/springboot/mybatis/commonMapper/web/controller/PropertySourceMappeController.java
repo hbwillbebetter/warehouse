@@ -52,7 +52,7 @@ import springboot.mybatis.commonMapper.model.ServerSettings;
  *
  */
 @RestController
-//@PropertySource({"classpath:resource.properties"})
+@PropertySource({"classpath:resource.properties"})
 @RequestMapping("/test")
 public class PropertySourceMappeController {
 	

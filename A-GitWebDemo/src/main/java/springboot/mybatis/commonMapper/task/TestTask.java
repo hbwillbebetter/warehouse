@@ -14,7 +14,7 @@ public class TestTask {
 //	@Scheduled(fixedRate=2000) //两秒执行一次
 //	@Scheduled(cron="*/1 * * * * *") //每秒执行一次
 //	@Scheduled(fixedDelay=2000) //两秒执行一次
-	@Scheduled(fixedRateString="2000") //字符串形式	两秒执行一次
+//	@Scheduled(fixedRateString="2000") //字符串形式	两秒执行一次
 	public void task1() throws InterruptedException{
 		Thread.sleep(4000L);
 		System.out.println("当前时间:"+new Date());
