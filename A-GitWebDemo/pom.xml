@@ -29,22 +29,23 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<scope>test</scope>
+			<!-- 默认的版本为3.8.1，修改为4.x,因为3.x使用的为编程的方式，4.x为注解的形式。 -->
+			<!-- <version>4.12</version> -->
 		</dependency>
 		<!-- *********************************junit单元测试 end****************************************** -->
-		
+
 		<!-- *********************************添加springboot依赖 start****************************************** -->
-		<!--热部署依赖-->
+		<!--热部署依赖 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
-		<!--Freemarker依赖-->
+		<!--Freemarker依赖 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-freemarker</artifactId>
 		</dependency>
-		<!--thymeleaf依赖-->
+		<!--thymeleaf依赖 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -67,16 +68,16 @@
 			<version>2.0.1</version>
 		</dependency>
 		<!-- mapper -->
-        <dependency>
-          <groupId>tk.mybatis</groupId>
-          <artifactId>mapper-spring-boot-starter</artifactId>
-          <version>2.1.5</version>
-        </dependency>
-        <!-- 通用Mapper -->
 		<dependency>
-		  <groupId>tk.mybatis</groupId>
-		  <artifactId>mapper</artifactId>
-		  <version>3.3.9</version>
+			<groupId>tk.mybatis</groupId>
+			<artifactId>mapper-spring-boot-starter</artifactId>
+			<version>2.1.5</version>
+		</dependency>
+		<!-- 通用Mapper -->
+		<dependency>
+			<groupId>tk.mybatis</groupId>
+			<artifactId>mapper</artifactId>
+			<version>3.3.9</version>
 		</dependency>
 		<!-- Druid 数据连接池依赖 -->
 		<dependency>
@@ -85,37 +86,34 @@
 			<version>1.1.12</version>
 		</dependency>
 		<!-- 数据库驱动包 -->
-		<!-- <dependency>
+		<!-- <dependency> <groupId>mysql</groupId> <artifactId>mysql-connector-java</artifactId> 
+			<version>5.1.26</version> </dependency> -->
+		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.26</version>
-		</dependency> -->
-		<dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
-        </dependency>
+			<scope>runtime</scope>
+		</dependency>
 		<!-- 自动生成get set工具类 -->
 		<dependency>
-	        <groupId>org.projectlombok</groupId>
-	        <artifactId>lombok</artifactId>
-	        <optional>true</optional>
-	    </dependency>
-	    <!-- 分页插件 -->
-        <dependency>
-            <groupId>com.github.pagehelper</groupId>
-            <artifactId>pagehelper-spring-boot-starter</artifactId>
-            <version>1.2.10</version>
-        </dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<!-- 分页插件 -->
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper-spring-boot-starter</artifactId>
+			<version>1.2.10</version>
+		</dependency>
 		<!-- *********************************添加springboot依赖 end****************************************** -->
 
 		<!-- *********************************redis 相关 start*************************************** -->
 		<dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-            <version>2.9.0</version>
-        </dependency>
-        <dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>2.9.0</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 			<exclusions>
@@ -126,37 +124,34 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-        <!-- Redisson组件用到依赖 start -->
-        <dependency>
+		<!-- Redisson组件用到依赖 start -->
+		<dependency>
 			<groupId>org.redisson</groupId>
 			<artifactId>redisson</artifactId>
 			<version>3.6.5</version>
 		</dependency>
 		<!-- Redisson组件用到依赖 end -->
 		<!-- *********************************redis 相关 end*************************************** -->
-		
+
 		<!-- *********************************netty start*************************************** -->
-		<!-- <dependency>
-			<groupId>io.netty</groupId>
-			<artifactId>netty-all</artifactId>
-			<version>4.1.25.Final</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>io.netty</groupId> <artifactId>netty-all</artifactId> 
+			<version>4.1.25.Final</version> </dependency> -->
 		<!-- *********************************netty end*************************************** -->
-		
+
 		<!-- *********************************zookeeper start*************************************** -->
 		<dependency>
 			<groupId>org.apache.zookeeper</groupId>
 			<artifactId>zookeeper</artifactId>
 			<version>3.4.10</version>
 		</dependency>
-	
+
 		<dependency>
 			<groupId>com.101tec</groupId>
 			<artifactId>zkclient</artifactId>
 			<version>0.11</version>
 		</dependency>
 		<!-- *********************************zookeeper end*************************************** -->
-		
+
 		<!-- *********************************mybatis start*************************************** -->
 		<!-- mybatis 反向代码生成 -->
 		<dependency>
@@ -165,22 +160,22 @@
 			<version>${mybatis.version}</version>
 		</dependency>
 		<!-- *********************************mybatis end****************************************** -->
-		
-		<!-- *************************************阿里easyExcel	start**************************************** -->
+
+		<!-- *************************************阿里easyExcel start**************************************** -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>easyexcel</artifactId>
 			<version>2.0.0</version>
 		</dependency>
-		<!-- *************************************阿里easyExcel	end***************************************** -->
-		
+		<!-- *************************************阿里easyExcel end***************************************** -->
+
 		<!-- ************************************JSON解析框架依赖 start*************************************** -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
 		</dependency>
 		<!-- ************************************JSON解析框架依赖 end***************************************** -->
-		
+
 		<!-- ************************************cglib start*************************************** -->
 		<dependency>
 			<groupId>cglib</groupId>
@@ -188,25 +183,19 @@
 			<version>2.2.2</version>
 		</dependency>
 		<!-- ************************************cglib end***************************************** -->
-		
+
 		<!-- ************************************log4j start***************************************** -->
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
-		<!-- <dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-api</artifactId>
-			<version>2.9.1</version>
-		</dependency> -->
-		<!-- <dependency>
-			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-core</artifactId>
-			<version>2.9.1</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>org.apache.logging.log4j</groupId> <artifactId>log4j-api</artifactId> 
+			<version>2.9.1</version> </dependency> -->
+		<!-- <dependency> <groupId>org.apache.logging.log4j</groupId> <artifactId>log4j-core</artifactId> 
+			<version>2.9.1</version> </dependency> -->
 		<!-- ************************************log4j start**************************************** -->
-		
+
 		<!-- ************************************lucene start*************************************** -->
 		<dependency>
 			<groupId>com.janeluo</groupId>
@@ -239,19 +228,19 @@
 			<version>4.4.0</version>
 		</dependency>
 		<!-- ************************************lucene end***************************************** -->
-		
+
 		<!-- ************************************fahai data export lib start************************ -->
 		<!-- c3p0 -->
 		<dependency>
-		    <groupId>c3p0</groupId>
-		    <artifactId>c3p0</artifactId>
-		    <version>0.9.1.1</version>
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.1.1</version>
 		</dependency>
 		<dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-            <version>23.0</version>
-        </dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>23.0</version>
+		</dependency>
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
@@ -272,11 +261,8 @@
 			<artifactId>fastjson</artifactId>
 			<version>${fastjson.version}</version>
 		</dependency>
-		<!-- <dependency>
-			<groupId>commons-codec</groupId>
-			<artifactId>commons-codec</artifactId>
-			<version>1.12</version>
-		</dependency> -->
+		<!-- <dependency> <groupId>commons-codec</groupId> <artifactId>commons-codec</artifactId> 
+			<version>1.12</version> </dependency> -->
 		<dependency>
 			<groupId>commons-httpclient</groupId>
 			<artifactId>commons-httpclient</artifactId>
@@ -296,71 +282,44 @@
 
 	<build>
 		<finalName>A-GitWebDemo</finalName>
-		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
-				defaults (may be moved to parent pom) -->
-			<plugins>
-				<plugin>
-					<groupId>org.springframework.boot</groupId>
-					<artifactId>spring-boot-maven-plugin</artifactId>
-				</plugin>
-				<plugin>
-					<artifactId>maven-clean-plugin</artifactId>
-					<version>3.0.0</version>
-				</plugin>
-				<!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
-				<plugin>
-					<artifactId>maven-resources-plugin</artifactId>
-					<version>3.0.2</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.7.0</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>2.20.1</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-war-plugin</artifactId>
-					<version>3.2.0</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-install-plugin</artifactId>
-					<version>2.5.2</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-deploy-plugin</artifactId>
-					<version>2.8.2</version>
-				</plugin>
-
-				<plugin>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.1</version>
-					<configuration>
-						<source>1.8</source>
-						<target>1.8</target>
-					</configuration>
-				</plugin>
-				<!-- 第一种 -->
-				<!-- <plugin> <groupId>org.mybatis.generator</groupId> <artifactId>mybatis-generator-maven-plugin</artifactId> 
-					<version>1.3.2</version> <configuration> <configurationFile> 该路径就是我们创建generatorConfig.xml文件的全路径，千万别配错了 
-					src/main/resources/generatorConfig.xml </configurationFile> <verbose>true</verbose> 
-					<overwrite>true</overwrite> </configuration> <executions> <execution> <id>Generate 
-					MyBatis Artifacts</id> <goals><goal>generate</goal></goals> </execution> 
-					</executions> <dependencies> <dependency> <groupId>org.mybatis.generator</groupId> 
-					<artifactId>mybatis-generator-core</artifactId> <version>1.3.2</version> 
-					</dependency> </dependencies> </plugin> -->
-				<!-- 第二种方式数据库反向生成java -->
-				<plugin>
-					<groupId>org.mybatis.generator</groupId>
-					<artifactId>mybatis-generator-maven-plugin</artifactId>
-					<version>1.3.2</version>
-					<configuration>
-						<verbose>true</verbose>
-						<overwrite>true</overwrite>
-					</configuration>
-				</plugin>
-			</plugins>
-		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>springboot.mybatis.commonMapper.App</mainClass>
+				</configuration>
+			</plugin>
+			<!-- 第一种 -->
+			<plugin>
+				<groupId>org.mybatis.generator</groupId>
+				<artifactId>mybatis-generator-maven-plugin</artifactId>
+				<version>1.3.2</version>
+				<configuration>
+					<configurationFile> <!-- 该路径就是我们创建generatorConfig.xml文件的全路径，千万别配错了 -->
+						src/main/resources/generatorConfig.xml
+					</configurationFile>
+					<verbose>true</verbose>
+					<overwrite>true</overwrite>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.mybatis.generator</groupId>
+						<artifactId>mybatis-generator-core</artifactId>
+						<version>1.3.2</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<!-- 第二种方式数据库反向生成java -->
+			<plugin>
+				<groupId>org.mybatis.generator</groupId>
+				<artifactId>mybatis-generator-maven-plugin</artifactId>
+				<version>1.3.2</version>
+				<configuration>
+					<verbose>true</verbose>
+					<overwrite>true</overwrite>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 </project>
