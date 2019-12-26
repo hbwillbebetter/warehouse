@@ -35,6 +35,16 @@
 		<!-- *********************************junit单元测试 end****************************************** -->
 
 		<!-- *********************************添加springboot依赖 start****************************************** -->
+		<!--
+			最好不要将springboot项目用外置tomcat启动，因为坑很多
+			外置tomcat启动,如果不需要额外打war包部署到外置tomcat中，则此部分注释
+			主要是因为springboot项目利用的是自己内置的tomcat,这边就是不依赖内置的tomcat,将其编译的作用域设置为provided
+		-->
+        <!-- <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+        </dependency> -->
 		<!--热部署依赖 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -281,7 +291,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>A-GitWebDemo</finalName>
+		<finalName>springboot-demo</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
