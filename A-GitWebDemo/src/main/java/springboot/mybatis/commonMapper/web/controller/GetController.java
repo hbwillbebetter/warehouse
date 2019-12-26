@@ -17,10 +17,20 @@ public class GetController {
 	final Map<String, String> params = new HashMap<String, String>();
 	@RequestMapping(value="/api/v1/account")
 	public Object account(HttpServletRequest request){
-		request.setAttribute("name", "springboot");
+		params.clear();
 		params.put("money", "1000");
 		return params;
 	}
+	
+	@RequestMapping(value="/api/test_request")
+	public Object testRequest(HttpServletRequest request){
+		params.clear();
+		String id = request.getParameter("id");
+		System.out.println("Controller处理中");
+		params.put("id", id);
+		return params;
+	}
+	
 	
 	
 }

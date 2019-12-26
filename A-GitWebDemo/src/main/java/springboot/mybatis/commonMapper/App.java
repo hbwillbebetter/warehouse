@@ -16,7 +16,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 //@Component
 @EnableAsync	//开启异步任务
 @EnableScheduling //开启定时任务
-@ServletComponentScan	//开启servlet组件扫描，如Filter..
+@ServletComponentScan	//开启servlet组件扫描，如Filter/Servlet..
 public class App /*extends SpringBootServletInitializer*/ {
 	
 //	/**
