@@ -5,6 +5,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -30,6 +31,30 @@ public class GetController {
 		params.put("id", id);
 		return params;
 	}
+	
+	@GetMapping(value="/api2/v1/account")
+	public Object account2(HttpServletRequest request){
+		params.clear();
+		System.out.println(" controller -->account2");
+		params.put("money", "1000");
+		return params;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

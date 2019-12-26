@@ -26,10 +26,15 @@ import javax.servlet.http.HttpServletResponse;
                不放行，web应用resp.sendRedirect("/index.html");
                 场景：权限控制、用户登录(非前端后端分离场景)等
  *
+ *	拦截器、过滤器两者的本质区别：拦截器（Interceptor）是基于Java的反射机制，而过滤器（Filter）是基于函数回调。
+ *	从灵活性上说拦截器功能更强大些，Filter能做的事情，都能做，而且可以在请求前，请求后执行，比较灵活。
+ *	Filter主要是针对URL地址做一个编码的事情、过滤掉没用的参数、安全校验（比较泛的，比如登录不登录之类），太细的话，还是建议用interceptor。
+ *	不过还是根据不同情况选择合适的。
+ *
  * @WebFilter是spring3.0的一个注解。
  * urlPatterns:要拦截的url。 /*是拦截所有的请求。这里配置的是/api/*拦截api开头的下面的所有请求。
  */
-@WebFilter(urlPatterns="/api/*", filterName="loginFilter")
+//@WebFilter(urlPatterns="/api/*", filterName="loginFilter")
 public class LoginFilter implements Filter {
 	/**
 	 * 容器被销毁的时候调用
