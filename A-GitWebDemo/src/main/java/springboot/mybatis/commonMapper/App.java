@@ -3,6 +3,7 @@ package springboot.mybatis.commonMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -15,6 +16,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 //@Component
 @EnableAsync	//开启异步任务
 @EnableScheduling //开启定时任务
+@ServletComponentScan	//开启servlet组件扫描，如Filter..
 public class App /*extends SpringBootServletInitializer*/ {
 	
 //	/**
