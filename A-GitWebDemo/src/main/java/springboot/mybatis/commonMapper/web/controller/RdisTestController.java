@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import springboot.mybatis.commonMapper.component.RedisClient;
 import springboot.mybatis.commonMapper.model.JsonData;
 import springboot.mybatis.commonMapper.model.User3;
 import springboot.mybatis.commonMapper.utils.JsonUtils;
+import springboot.mybatis.commonMapper.utils.RedisClient;
 
 //springboot整合redis	https://www.cnblogs.com/qdhxhz/p/9054071.html
 @RestController

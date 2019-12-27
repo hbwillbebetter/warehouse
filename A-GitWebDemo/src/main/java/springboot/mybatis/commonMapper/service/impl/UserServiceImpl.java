@@ -4,6 +4,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.github.pagehelper.PageHelper;
 
@@ -53,6 +56,22 @@ public class UserServiceImpl implements UserService {
         pageData.setItems(allItems);
         return pageData.getItems();
     }
+
+	@Override
+	/*
+	 * https://www.cnblogs.com/wangjunwei/p/11425485.html
+	 * 支持当前事务，如果当前没有事务，就新建一个事务,最常见的选择。(non-Javadoc)
+	 * @see springboot.mybatis.commonMapper.service.UserService#addAccount()
+	 */
+	@Transactional(propagation=Propagation.REQUIRED,isolation=Isolation.DEFAULT)
+	public int addAccount() {
+		User user = new User();
+		user.setAge(88L);
+		user.setName("测试事务啦");
+		userMapper.insert(user);
+		int i=19/0;//异常的代码
+		return 0;
+	}
 
 	
 

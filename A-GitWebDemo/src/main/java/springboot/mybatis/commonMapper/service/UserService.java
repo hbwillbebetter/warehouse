@@ -14,4 +14,10 @@ public interface UserService {
 	User getUserById(Long id);
 	//分页功能
 	List<User> findItemByPage(int currentPage,int pageSize);
+	
+	/**
+	 * 功能描述：测试事务
+	 * @return
+	 */
+	public int addAccount();
 }

@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import springboot.mybatis.commonMapper.model.JsonData;
 import springboot.mybatis.commonMapper.model.User;
 import springboot.mybatis.commonMapper.service.UserService;
 
@@ -74,5 +75,12 @@ public class UserController {
     public int deleteUser(@PathVariable Long id){
         return service.deleteUser(id);
     }
+    //测试事务
+    @GetMapping("/add_account")
+    public Object addAccount(){
+    	int id = service.addAccount();
+        return JsonData.buildSuccess(id);
+    }
+    
 	
 }
