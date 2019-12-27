@@ -1,4 +1,8 @@
 #参考 https://blog.csdn.net/lizheng1992123/article/details/81608007
+env: local
+#指定哪个profile
+spring.profiles.active: local
+
 server:
   port: 8080
 spring:
