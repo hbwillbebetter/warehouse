@@ -12,6 +12,7 @@ import springboot.mybatis.commonMapper.utils.JsonUtils;
 import springboot.mybatis.commonMapper.utils.RedisClient;
 
 //springboot整合redis	https://www.cnblogs.com/qdhxhz/p/9054071.html
+//https://www.cnblogs.com/wangjunwei/p/11426628.html
 @RestController
 @RequestMapping("/api/v1/redis")
 public class RdisTestController {

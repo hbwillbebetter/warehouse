@@ -7,10 +7,14 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import springboot.mybatis.commonMapper.App;
+import springboot.mybatis.commonMapper.model.User3;
+import springboot.mybatis.commonMapper.utils.JsonUtils;
 
 //SpringRunner是继承了SpringJUnit4ClassRunner，这是springboot里面推荐的方法
 @RunWith(SpringRunner.class)	//底层用junit SpringJUnit4ClassRunner
@@ -42,5 +46,20 @@ public class SpringBootTestDemo {
 	public void testAfter(){
 		System.out.println("after");
 	}
+	
+	@Autowired
+	private StringRedisTemplate stringRedisTemplate;
+	
+	@Test
+	public void test_redis(){
+		User3 user = new User3();
+		user.setAge(1);
+		user.setPhone("222");
+		user.setPwd("000");
+		String str = JsonUtils.obj2String(user);
+		stringRedisTemplate.opsForValue().set("str", str);
+		System.out.println(str);
+	}
+	
 	
 }
