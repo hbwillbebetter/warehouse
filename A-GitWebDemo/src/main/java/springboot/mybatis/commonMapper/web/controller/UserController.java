@@ -1,15 +1,14 @@
 package springboot.mybatis.commonMapper.web.controller;
 
 import java.util.List;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-
 import springboot.mybatis.commonMapper.model.JsonData;
 import springboot.mybatis.commonMapper.model.User;
 import springboot.mybatis.commonMapper.service.UserService;
@@ -25,9 +24,19 @@ import springboot.mybatis.commonMapper.service.UserService;
  */
 @RestController
 public class UserController {
+	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
 	private UserService service;
+	
+	@GetMapping("log")
+	public Object testLog(){
+		logger.debug("this is debug level");
+		logger.info("this is info level");
+		logger.warn("this is warn level");
+		logger.error("this is error level");
+		return JsonData.buildSuccess();
+	}
 	
 	//分页插件
 	/**

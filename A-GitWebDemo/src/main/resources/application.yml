@@ -75,8 +75,8 @@ pagehelper:                       #pagehelper分页插件
     reasonable: true
     supportMethodsArguments: true
     params: count=countSql  
-#logging:
-#  config: classpath:logback-admin.xml
+logging:
+  config: classpath:logback-spring.xml
 #log:
 #  level:
 #    root: info
