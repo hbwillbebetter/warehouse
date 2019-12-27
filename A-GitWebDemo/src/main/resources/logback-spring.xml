@@ -37,7 +37,7 @@
     <appender name="fileErrorApp" class="ch.qos.logback.core.rolling.RollingFileAppender">
     	<!-- 如level=ERROR,则表示只是ERROR级别以上的日志才显示 -->
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
-            <level>INFO</level>
+            <level>ERROR</level>
         </filter>
         <encoder>
             <pattern>
