@@ -1,10 +1,10 @@
 #参考 https://blog.csdn.net/lizheng1992123/article/details/81608007
-env: local
+env: xdvideo
 #指定哪个profile
-spring.profiles.active: xdvideo
+#spring.profiles.active: local
 
 server:
-  port: 8080
+  port: 8082
 spring:
   datasource: 
     driver-class-name: com.mysql.jdbc.Driver  #  配置mysql的驱动程序类
@@ -67,8 +67,9 @@ spring.redis:
 mybatis: 
 #  configLocation: 
 #    classpath: mybatis/mybatis-config.xml  #  mybatis主配置文件所在路径
-#    map-underscore-to-camel-case: true  #开启驼峰映射
-  configuration.log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启控制台打印sql
+  configuration:
+    mapUnderscoreToCamelCase: true    #下划线转驼峰映射配置(数据库字段->实体类字段)
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启控制台打印sql
   typeAliasesPackage: springboot.mybatis.commonMapper.model  #  定义所有操作类的别名所在包
   mapper-locations: classpath:mybatis/commonMapper/mapper/*.xml  #  所有的mapper映射文件（mapper接口映射过来的xml局部配置文件）
 mapper: 
@@ -87,16 +88,6 @@ logging:
 #    my: debug
 #  file: logs/admin-server.log
 #  maxsize: 30MB
-#==================================微信相关==================================
-#公众号
-wxpay: 
-  appid: wx5beac15ca207cdd40c
-  appsecret: 5548012f33417fdsdsdd6f96b382fe548215e9
-#微信开放平台配置
-wxopen: 
-  appid: wx025575eac69a2d5b
-  appsecret: deeae310a387fa9d3e8f3830ce64caac
-  redirect_url: http://wesell.natapp1.cc/pub/api/v1/wechat/user/callback1    #重定向url
 
 
 

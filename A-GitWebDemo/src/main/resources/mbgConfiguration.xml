@@ -53,10 +53,15 @@
     
     
         <!-- 列出要生成代码的所有表，这里配置的是不生成Example文件 -->    
-        <table tableName="userinfo" domainObjectName="UserInfoPO"    
+        <!-- <table tableName="userinfo" domainObjectName="UserInfoPO"    
                enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"    
                enableSelectByExample="false" selectByExampleQueryId="false" >    
             <property name="useActualColumnNames" value="false"/>    
-        </table>    
+        </table> -->
+        <table tableName="video" domainObjectName="Video"    
+               enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"    
+               enableSelectByExample="false" selectByExampleQueryId="false" >    
+            <property name="useActualColumnNames" value="false"/>    
+        </table>   
     </context>    
 </generatorConfiguration> 
